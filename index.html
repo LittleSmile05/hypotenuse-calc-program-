@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F1F0E8;
+        }
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            color: #96B6C5;
+            font-family: 'Caveat', cursive;
+            font-family: 'Libre Baskerville', serif;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Roboto Slab', serif;
+        }
+        label{
+            font-weight: 1000;
+            font-family: 'Caveat', cursive;
+            font-family: 'Libre Baskerville', serif;
+            font-family: 'Playfair Display', serif;
+            font-family: 'Roboto Slab', serif;
+            color: #98b1bc;
+        }
+        input{
+            padding: 7px;
+            border: black solid 1px;
+            border-color: rgb(218, 188, 142);
+            border-radius: 7px;
+            background:linear-gradient(rgb(255, 248, 242),rgb(255, 255, 255));
+        }
+        button{
+            padding: 10px 40px;
+            background-color:#bad4df;
+            border-color:#bad4df ;
+            color: #506a75;
+            border-radius: 7px;
+        }
+        #cside{
+            color:#506a75 ;
+            background-color: #c2dbe6;
+        }
+        .triangle{
+            height: 100vh;
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+        img{
+            height: 150px;
+            margin-top: 40%;
+            border: 1px solid #506a75;
+            padding: 10px;
+            
+        }
+        p{
+            margin-left: 30%;
+            line-height: 25px;
+            color:#506a75 ;
+        }
+        h2{
+            text-align: center;
+            color:#506a75 ;
+        }
+        i{
+            font-weight: 1000;
+    
+            
+        }
+        
+
+    </style>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Libre+Baskerville&family=Playfair+Display:ital@1&family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+<body>
+    <div class="container">
+    <h1>hypotenuse calc program</h1>
+    <label >Side A:</label><br>
+    <input id="aside" type="text"><br>
+    <label >Side B:</label><br>
+    <input id="bside" type="text"><br>
+    <label id="cside"></label><br>
+    <button id="submit">Submit</button>
+</div>
+<h2>HYPOTENUSE </h2>
+<div class="triangle">
+    
+    <img src="https://i2.wp.com/cimg2.ck12.org/datastreams/f-d:8931e1eb3bfb68be6a22409863c956aad4ffeb08100967bfd16a5e68%2BIMAGE%2BIMAGE.1" alt="HYPOTENUSE rule">
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.<br><i>Hypotenuse = √(Base) 2 + (Height)</i></p>
+    
+</div>
+
+    <script>
+        let a;
+        let b;
+        let c;
+        document.getElementById("submit").onclick=function(){
+            a=document.getElementById("aside").value;
+            a=Number(a)
+            b=document.getElementById("bside").value;
+            b=Number(b)
+            c=Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+            document.getElementById("cside").innerHTML="Side C: "+c;
+        }
+
+    </script>
+</body>
+</html>
